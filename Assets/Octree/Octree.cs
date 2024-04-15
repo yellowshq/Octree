@@ -155,7 +155,7 @@ public class Octree
                     Ray ray = new Ray(currentNode.nodeBounds.center, rays[r]);
                     float maxLength = currentNode.nodeBounds.size.y / 2.0f + 0.01f;
                     float hitLength;
-                    if (emptyLeaves[j].children == null && emptyLeaves[j].nodeBounds.IntersectRay(ray, out hitLength))
+                    if (emptyLeaves[j].nodeBounds.IntersectRay(ray, out hitLength))
                     {
                         if(hitLength < maxLength)
                         {
